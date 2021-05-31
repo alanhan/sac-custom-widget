@@ -31,6 +31,7 @@ var getScriptPromisify = (src) => {
     }
 
     async render() {
+      window.HOST_TYPE = "2"; // Indicate https for bmap
       await getScriptPromisify(
         "https://api.map.baidu.com/getscript?v=2.0&ak=5kcQTUe1WxudZLl92VRuLRgazlTR4B7d&s=1"
       );
@@ -41,7 +42,7 @@ var getScriptPromisify = (src) => {
         "https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/extension/bmap.min.js"
       );
 
-      const chart = echarts.init(this._root);
+      // const chart = echarts.init(this._root);
 
       var data = [
         { name: "海门", value: 9 },
@@ -441,6 +442,8 @@ var getScriptPromisify = (src) => {
         }
         return res;
       };
+
+      const chart = echarts.init(this._root);
 
       const option = {
         title: {
