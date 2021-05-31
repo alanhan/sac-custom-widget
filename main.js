@@ -32,7 +32,7 @@ var getScriptPromisify = (src) => {
 
     async render() {
       await getScriptPromisify(
-        "https://api.map.baidu.com/getscript?v=2.0&ak=5kcQTUe1WxudZLl92VRuLRgazlTR4B7d"
+        "https://api.map.baidu.com/getscript?v=2.0&ak=5kcQTUe1WxudZLl92VRuLRgazlTR4B7d&s=1"
       );
       await getScriptPromisify(
         "https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js"
